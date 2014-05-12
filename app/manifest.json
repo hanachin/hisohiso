@@ -1,6 +1,6 @@
 {
     "name": "hisohiso",
-    "version": "0.0.11",
+    "version": "0.0.14",
     "manifest_version": 2,
     "description": "idobata.ioに見てるページをpostするための拡張です",
     "icons": {
