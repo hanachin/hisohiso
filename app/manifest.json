@@ -1,6 +1,6 @@
 {
     "name": "hisohiso",
-    "version": "0.0.14",
+    "version": "0.0.42",
     "manifest_version": 2,
     "description": "idobata.ioに見てるページをpostするための拡張です",
     "icons": {
@@ -25,6 +25,7 @@
     "options_page": "options.html",
     "permissions": [
         "tabs",
+        "storage",
         "http://*/*",
         "https://*/*"
     ]
