@@ -13,24 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
         url.value  = '';
     }
 
-    function saveHooks(hooks) {
-        chrome.storage.sync.set({hooks: hooks}, function () {
-            if (chrome.runtime.lastError) {
-                alert('save hooks failed: ' + chrome.runtime.lastError);
-            }
-        });
-    }
-
     function getHookConfig() {
         return {name: name.value, url: url.value};
     }
-
-    function withHooks(callback) {
-        chrome.storage.sync.get({hooks:[]}, function (items) {
-            callback(items.hooks);
-        });
-    }
-
     function addButtonClicked() {
         withHooks(function (hooks) {
             if (!isFilledRequiredFields()) {
