@@ -25,6 +25,6 @@ function postCurrentPageToIdobata(event) {
     var hook_url = event.target.dataset.url;
     chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
         if (tabs.length === 0) return;
-        console.log(hook_url, tabs[0], tabs[0].title, tabs[0].url);
+        chrome.runtime.sendMessage({hook_url: hook_url, title: tabs[0].title, url: tabs[0].url});
     });
 }
